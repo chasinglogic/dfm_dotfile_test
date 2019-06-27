@@ -1,0 +1,15 @@
+---
+prompt_for_commit_message: false
+always_sync_modules: true
+mappings:
+  - match: "skip_me"
+    skip: true
+hooks:
+  after_link:
+    - echo "after link hook ran" > $HOME/after_link_ran
+  before_link:
+    - echo "before link hook ran" > $HOME/before_link_ran
+  after_sync:
+    - echo "after sync hook ran" > $HOME/after_sync_ran
+  before_sync:
+    - echo "before sync hook ran" > $HOME/before_sync_ran
